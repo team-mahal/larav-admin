@@ -18,7 +18,6 @@ Route::group(['middleware' => 'auth:api'], function () {
 
     Route::get('/user', function (Request $request) {
         $user =  $request->user();
-        $user->attendance;
         return $user;
     });
 
@@ -55,67 +54,6 @@ Route::group([
         'show', 'edit'
     ]);
     Route::get('clients/all', 'Admin\ClientController@all');
-    Route::get('clientsearch/{query}', 'Admin\ClientController@query');
-    Route::get('issuesearch/{query}', 'Admin\IssueController@query');
-    Route::get('projectsearch/{query}', 'Admin\ProjectController@query');
-    Route::get('issueforslient/{id}', 'Admin\ClientController@issue');
-    Route::get('taskforissue/{id}', 'Admin\TaskController@task');
-    Route::get('issueforprojectsearch/{id}', 'Admin\ProjectController@issue');
 
-    Route::resource('districts', 'Admin\DistrictController')->except(['show', 'edit']);
-    Route::get('districts/all', 'Admin\DistrictController@all');
-    Route::resource('upazilas', 'Admin\UpazilaController')->except(['show', 'edit']);
-    
-    Route::resource('projects', 'Admin\ProjectController')->except([
-        'show', 'edit'
-    ]);
-    Route::get('projects/all', 'Admin\ProjectController@all');
-
-    Route::resource('issues', 'Admin\IssueController')->except([
-       'edit'
-    ]);
-
-    Route::post('issues/statusupdate', 'Admin\IssueController@statusupdate');
-
-
-    Route::resource('issuecomment', 'Admin\IssuecommentController');
-    Route::resource('comment', 'Admin\CommentController');
-
-    Route::resource('tasks', 'Admin\TaskController')->except([
-       'edit'
-    ]);
-    
-    Route::resource('departments', 'Admin\DepartmentController')->except([
-        'show', 'edit'
-    ]);
-
-
-    Route::get('departments/all', 'Admin\DepartmentController@all');
-
-    Route::resource('designations', 'Admin\DesignationController')->except([
-        'show', 'edit'
-    ]);
-    Route::resource('notices', 'Admin\NoticeController')->except([
-        'show', 'edit'
-    ]);
-    Route::resource('weekends', 'Admin\WeekendController')->except([
-        'show', 'edit'
-    ]);
-    Route::resource('holidays', 'Admin\HolidayController')->except([
-        'show', 'edit'
-    ]);
-    Route::resource('issue_types', 'Admin\IssueTypeController')->except([
-        'show', 'edit'
-    ]);
-    Route::get('issue_types/all', 'Admin\IssueTypeController@all');
-
-    Route::resource('statuses', 'Admin\StatusController')->except([
-        'show', 'edit'
-    ]);
-    Route::resource('attendances', 'Admin\AttendanceController')->except([
-        'show', 'edit'
-    ]);
-
-    Route::get('statuses/all', 'Admin\StatusController@all');
     Route::get('users', 'Settings\ProfileController@users');
 }); // this should be the absolute last line of this file
