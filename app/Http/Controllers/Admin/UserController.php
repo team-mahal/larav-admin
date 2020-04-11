@@ -57,7 +57,7 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreClientRequest $request)
+    public function store(Request $request)
     {
         if ($client = User::create([
             'name' => $request->name,
@@ -82,13 +82,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateClientRequest $request, $id)
+    public function update(Request $request, $id)
     {
         $client = User::find($id);
         $client->name = $request->name;
-        $client->phone = $request->phone;
         $client->email = $request->email;
-        $client->address = $request->address;
 
         if ($client->save()) {
             return response()->json([

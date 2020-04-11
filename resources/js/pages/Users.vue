@@ -64,8 +64,6 @@ export default {
             form: new Form({
                 name: '',
                 email: '',
-                id: '',
-                password: ''
             }),
             columns: [
                 {
@@ -81,11 +79,6 @@ export default {
                 {
                     label: 'Email',
                     name: 'email',
-                    orderable: true,
-                },
-                {
-                    label: 'Password',
-                    name: 'password',
                     orderable: true,
                 },
                 {
@@ -168,7 +161,6 @@ export default {
             this.getData(this.url);
             this.updateData = false;
             this.form.name = '';
-            this.form.phone = '';
             this.form.email = '';
             this.form.id = '';
             this.errors = {};
@@ -176,13 +168,13 @@ export default {
     	async storeOrUpdate () {
             // Submit the form.
             if(this.updateData) {
-                const response = await this.form.put('/api/clients/'+this.form.id);
+                const response = await this.form.put('/api/users/'+this.form.id);
                 if (response.status === 200) {
                     this.cleanForm();
                     showMessage(response.status, 'User updated successfully');
                 }
             }else {
-                const response = await this.form.post('/api/User');
+                const response = await this.form.post('/api/users');
                 if (response.status === 200) {
                     this.cleanForm();
                     showMessage(response.status, 'User created successfully');
