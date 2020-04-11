@@ -26,7 +26,7 @@
         :columns="columns"
         :classes="classes"
         :data="clients"
-        :url="base_url+'/api/clients'"
+        :url="base_url+'/api/users'"
         @loading="isLoading = true"
         @finishedLoading="isLoading = false">
     </data-table>
@@ -51,7 +51,7 @@ export default {
 	data() {
         return {
             base_url: base_url,
-            url: base_url+'/api/clients',
+            url: base_url+'/api/users',
             tableProps: {
                 search: '',
                 length: 10,
@@ -65,8 +65,7 @@ export default {
                 name: '',
                 email: '',
                 id: '',
-                phone: '',
-                address: ''
+                password: ''
             }),
             columns: [
                 {
@@ -80,18 +79,13 @@ export default {
                     orderable: true,
                 },
                 {
-                    label: 'Contact No.',
-                    name: 'phone',
-                    orderable: true,
-                },
-                {
                     label: 'Email',
                     name: 'email',
                     orderable: true,
                 },
                 {
-                    label: 'Address',
-                    name: 'address',
+                    label: 'Password',
+                    name: 'password',
                     orderable: true,
                 },
                 {
@@ -185,13 +179,13 @@ export default {
                 const response = await this.form.put('/api/clients/'+this.form.id);
                 if (response.status === 200) {
                     this.cleanForm();
-                    showMessage(response.status, 'Client updated successfully');
+                    showMessage(response.status, 'User updated successfully');
                 }
             }else {
-                const response = await this.form.post('/api/clients');
+                const response = await this.form.post('/api/User');
                 if (response.status === 200) {
                     this.cleanForm();
-                    showMessage(response.status, 'Client created successfully');
+                    showMessage(response.status, 'User created successfully');
                 }
             }
         },
@@ -214,14 +208,14 @@ export default {
         }
     },
     created(){
-        var self = this;
-        axios.get('/api/clients/create').then(function (response) {
-            self.form.originalData=response.data;
-        }).catch(function (error) {
-            console.log(error);
-        }).then(function () {
-            // always executed
-        });
+        // var self = this;
+        // axios.get('/api/users/create').then(function (response) {
+        //     self.form.originalData=response.data;
+        // }).catch(function (error) {
+        //     console.log(error);
+        // }).then(function () {
+        //     // always executed
+        // });
     }
 }
 </script>

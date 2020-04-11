@@ -7,11 +7,36 @@ use App\Notifications\ResetPassword;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 use Illuminate\Notifications\Notifiable;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use JamesDordoy\LaravelVueDatatable\Traits\LaravelVueDatatableTrait;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable implements JWTSubject //, MustVerifyEmail
 {
     use Notifiable;
+    use LaravelVueDatatableTrait;
+
+    protected $dataTableColumns = [
+        'id' => [
+            'searchable' => false,
+        ],
+        'name' => [
+            'searchable' => true,
+        ],
+        'email' => [
+            'searchable' => true,
+        ],
+        'password' => [
+            'searchable' => true,
+        ],
+    ];
+    protected $columns = [
+        'name'=>'', 'email'=>'', 'password'=>'',
+    ];
+
+    public function getTableColumns() {
+        return $this->columns;;
+    }
+
 
     /**
      * The attributes that are mass assignable.

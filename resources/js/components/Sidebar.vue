@@ -45,8 +45,7 @@
             </li>
             <router-link to="/">
                 <li class="text-center text-blue-900 py-1">
-                    <h2 class="text-sm py-4 md:py-0 md:text-4xl">
-                    HUB</h2>
+                    <h2 class="text-sm py-4 md:py-0 md:text-4xl">HUB</h2>
                 </li>
             </router-link>
             <li class="my-2 md:my-0">   
@@ -61,8 +60,8 @@
                 </a>
             </li>
             <li class="my-2 md:my-0">
-                <router-link to="/client" class="block py-2 justify-center md:md:justify-start pl-1 align-middle text-gray-600 no-underline hover:text-indigo-400">
-                    <span class="w-full inline-block pb-1 md:pb-0 text-sm hidden sm:hidden md:block lg:block xl:block active">Clients</span>
+                <router-link to="/users" class="block py-2 justify-center md:md:justify-start pl-1 align-middle text-gray-600 no-underline hover:text-indigo-400">
+                    <span class="w-full inline-block pb-1 md:pb-0 text-sm hidden sm:hidden md:block lg:block xl:block active">Users</span>
                 </router-link>
             </li>
         </ul>

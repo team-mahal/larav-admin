@@ -2,15 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\StoreClientRequest;
-use App\Http\Requests\UpdateClientRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Client;
-use App\Models\Issue;
+use App\User;
 use JamesDordoy\LaravelVueDatatable\Http\Resources\DataTableCollectionResource;
 
-class ClientController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +21,7 @@ class ClientController extends Controller
         $orderBy = $request->input('dir');
         $searchValue = $request->input('search');
         
-        $query = Client::eloquentQuery($sortBy, $orderBy, $searchValue);
+        $query = User::eloquentQuery($sortBy, $orderBy, $searchValue);
 
         $data = $query->paginate($length);
         
@@ -35,9 +32,9 @@ class ClientController extends Controller
     {
         $clients;
         if ($request->has('status')) {
-            $clients = Client::where('status', $request->input('status'))->get();
+            $clients = User::where('status', $request->input('status'))->get();
         }else {
-            $clients = Client::get();
+            $clients = User::get();
         }
 
         return \response()->json($clients);
@@ -45,7 +42,7 @@ class ClientController extends Controller
 
     public function query($query='')
     {
-        $clients = Client::where('name','like','%'.$query.'%')->get();
+        $clients = User::where('name','like','%'.$query.'%')->get();
         return $clients;
     }
 
@@ -62,7 +59,7 @@ class ClientController extends Controller
      */
     public function store(StoreClientRequest $request)
     {
-        if ($client = Client::create([
+        if ($client = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
@@ -74,7 +71,7 @@ class ClientController extends Controller
 
     public function create()
     {
-        $client=new Client();
+        $client=new User();
         return response($client->getTableColumns());
     }
 
@@ -87,7 +84,7 @@ class ClientController extends Controller
      */
     public function update(UpdateClientRequest $request, $id)
     {
-        $client = Client::find($id);
+        $client = User::find($id);
         $client->name = $request->name;
         $client->phone = $request->phone;
         $client->email = $request->email;
@@ -108,7 +105,7 @@ class ClientController extends Controller
      */
     public function destroy($id)
     {
-        $client = Client::find($id);
+        $client = User::find($id);
         if ($client->delete()) {
             return response()->json([
                 'success' => true

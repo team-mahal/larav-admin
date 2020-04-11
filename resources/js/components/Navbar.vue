@@ -15,22 +15,6 @@
 
             </div>
             <!-- / Search-->
-            
-            <div v-if="user">
-                <div v-if="user.attendance">
-                    <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-4 rounded" @click="fatchuser">Check in</button>
-                </div>
-                <div v-else>
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">Check Out</button>
-                </div>
-            </div>
-
-            <t-modal ref="modal" class="curdmodel">
-                <form class="bg-white rounded px-8 pt-6 pb-8 mb-4" @submit.prevent="storeOrUpdate" @keydown="form.onKeydown($event)">
-                    
-                </form>
-            </t-modal>
-
             <!--Menu-->
             <div class="flex relative inline-block pr-6">
 
@@ -106,9 +90,6 @@ export default {
 	}),
 
 	methods: {
-        fatchuser(){
-            this.$refs.modal.show()
-        },
         dropdown(){
             this.activeClass=!this.activeClass
         },
