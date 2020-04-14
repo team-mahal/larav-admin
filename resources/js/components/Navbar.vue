@@ -1,7 +1,7 @@
 <template>
-<div>
+<div class="bg-white">
     <div class="w-full flex flex-wrap shadow py-2">
-        <nav id="header1" class="bg-gray-100 w-auto flex-1 border-b-1 border-gray-300 order-1 lg:order-2">
+        <nav id="header1" class="w-auto flex-1 border-b-1 border-gray-300 order-1 lg:order-2">
             <div class="flex h-full justify-between items-center">
             <!--Search-->
             <div class="relative w-50 px-6">
@@ -27,10 +27,10 @@
                             </button>
 						</template>
 						<template v-else>
-							<router-link class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" :to="{ name: 'login' }">
+							<router-link class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" :to="{ name: 'login' }">
 								{{ $t('login') }}
 							</router-link>
-							<router-link class="ml-3 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" :to="{ name: 'register' }">
+							<router-link class="ml-3 bg-white hover:bg-green-100 text-green-800 font-semibold py-2 px-4 border border-green-400 rounded shadow" :to="{ name: 'register' }">
 								{{ $t('register') }}
 							</router-link>
 						</template>
@@ -38,12 +38,12 @@
                     <div id="userMenu" v-bind:class="activeClass ? '' : 'hidden'"  class="bg-white nunito rounded shadow-md mt-2 absolute mt-12 top-0 right-0 min-w-full overflow-auto z-30">
                         <ul class="list-reset">
                             <li @click="dropdown()">
-                                <router-link to="/settings" class="px-4 py-2 block text-gray-900 hover:bg-indigo-400 hover:text-white no-underline hover:no-underline">
+                                <router-link to="/settings" class="px-4 py-2 block text-gray-900 hover:bg-green-400 hover:text-white no-underline hover:no-underline">
                                 My account
                             </router-link>
                         </li>
                         <li>
-                            <a href="#" class="px-4 py-2 block text-gray-900 hover:bg-indigo-400 hover:text-white no-underline hover:no-underline">
+                            <a href="#" class="px-4 py-2 block text-gray-900 hover:bg-green-400 hover:text-white no-underline hover:no-underline">
                                 Notifications
                             </a>
                         </li>
@@ -51,7 +51,7 @@
                             <hr class="border-t mx-2 border-gray-400">
                         </li>
                         <li>
-                            <a href="#" class="px-4 py-2 block text-gray-900 hover:bg-indigo-400 hover:text-white no-underline hover:no-underline" @click="logout">
+                            <a href="#" class="px-4 py-2 block text-gray-900 hover:bg-green-400 hover:text-white no-underline hover:no-underline" @click="logout">
                                 Logout
                             </a>
                         </li>
