@@ -12,7 +12,14 @@ import VueEditableElement from 'vue-editable-element'
 // register globally
 Vue.component('multiselect', Multiselect)
 Vue.component('Avatar', Avatar)
-Vue.use(vuescroll)
+Vue.use(vuescroll, {
+	ops: {
+    	bar: {
+		    background: '#48BB78'
+		}
+  	},
+  	name: 'vuescroll' // customize component name, default -> vueScroll
+});
 Vue.use(VueEditableElement)
 // Import component
 import 'vue-loading-overlay/dist/vue-loading.css';
