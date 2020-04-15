@@ -7,7 +7,10 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+	
 export default {
-  name: 'Child'
+  name: 'Child',
+ 
 }
 </script>

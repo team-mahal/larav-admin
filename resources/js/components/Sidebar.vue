@@ -1,5 +1,6 @@
 <template>
 <div>
+
     <div v-if="ismobile=='m'" id="sidebar" class="h-screen w-10 menu bg-white text-white px-0 lex nunito static fixed shadow">
         <ul class="list-reset w-full">
             <li class="relative">
@@ -74,6 +75,7 @@
             </li>
         </ul>
     </div>
+    
 </div>
 </template>
 
