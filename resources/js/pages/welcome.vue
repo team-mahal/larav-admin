@@ -1,6 +1,6 @@
 <template>
 <div>
-	<div class="flex flex-wrap md:flex-wrap lg:flex-wrap justify-center">
+	<div class="flex flex-wrap justify-center">
 		<div class="bg-white shadow-lg w-full md:w-1/3 lg:w-1/3 flex-grow xl:w-1/5 p-5 border-l-4 rounded-md border-green-500 m-2 flex items-center justify-between">
 			<div>
 				<h5 class="uppercase text-xs text-green-500">Users</h5>
@@ -38,8 +38,8 @@
 			</div>
 		</div>
 	</div>
-	<div class="flex">
-		<div class="bg-white shadow-lg rounded-md w-1/4 m-2">
+	<div class="flex flex-wrap">
+		<div class="bg-white rounded-md shadow-lg flex-grow w-full xl:w-1/5 m-2">
 			<div class="flex border-b-2 border-gray-100 p-5 items-center justify-between">
 			    <h3 class="text-md font-bold">Users</h3>
 			    <a href="#" class="text-md underline text-green-700">View All Users</a>
@@ -90,7 +90,7 @@
 			</div>
 		</div>
 
-		<div class="bg-white rounded-md shadow-lg w-1/4 m-2">
+		<div class="bg-white rounded-md shadow-lg flex-grow w-full xl:w-1/5 m-2">
 			<div class="flex border-b-2 border-gray-100 p-5 items-center justify-between">
 			    <h3 class="text-md font-bold">Total Yearly Impact</h3>
 			</div>
@@ -136,7 +136,7 @@
 			</div>
 		</div>
 
-		<div class="bg-white rounded-md shadow-lg w-2/4 m-2">
+		<div class="bg-white rounded-md shadow-lg flex-grow w-full xl:w-2/5 m-2">
 			<div class="flex border-b-2 border-gray-100 p-5 items-center justify-between">
 			    <h3 class="text-md font-bold">Total Business Earning</h3>
 			</div>
