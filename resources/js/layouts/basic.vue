@@ -3,7 +3,7 @@
 	<sidebar/>
 	<div :class="ismobile=='m' ? 'ml-10':'sm:ml-10 md:ml-64 lg:ml-64 xl:ml-64'">
 		<navbar/>
-		<div class="p-5">
+		<div class="p-3">
 			<child />
 		</div>
 	</div>
