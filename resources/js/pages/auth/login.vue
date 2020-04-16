@@ -3,21 +3,21 @@
 		<div>
 			<card :title="$t('login')">
 				<div class="max-w-xs m-auto">
-					<form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" @submit.prevent="login" @keydown="form.onKeydown($event)">
+					<form class="bg-white shadow-lg rounded px-8 pt-6 pb-8 mb-4" @submit.prevent="login" @keydown="form.onKeydown($event)">
 						<!-- Email -->
 						<div>
-							<label class="block text-gray-700 text-sm font-bold mb-2 text-left" for="username">{{ $t('email') }}</label>
+							<label class="block text-green-500 text-sm font-bold mb-2 text-left" for="username">{{ $t('email') }}</label>
 							<div class="col-md-7">
-								<input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="email" name="email">
+								<input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="block w-full bg-gray-200 focus:outline-none focus:bg-white focus:shadow-md rounded-full pl-12 pr-4 py-3" type="email" name="email">
 								<has-error :form="form" field="email" class="mt-2 text-red-600 text-left font-semibold" />
 							</div>
 						</div>
 
 						<!-- Password -->
 						<div class="form-group row">
-							<label class="block text-gray-700 text-sm font-bold mb-2 text-left" for="password">{{ $t('password') }}</label>
+							<label class="block text-green-500 text-sm font-bold mb-2 text-left" for="password">{{ $t('password') }}</label>
 							<div class="col-md-7">
-								<input v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="password" name="password">
+								<input v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" class="sblock w-full bg-gray-200 focus:outline-none focus:bg-white focus:shadow-md rounded-full pl-12 pr-4 py-3"  type="password" name="password">
 								<has-error :form="form" field="password" class="mt-2 text-red-600 text-left font-semibold"/>
 							</div>
 						</div>
@@ -30,7 +30,7 @@
 									{{ $t('remember_me') }}
 								</checkbox>
 
-								<router-link :to="{ name: 'password.request' }" class="small ml-auto my-auto">
+								<router-link :to="{ name: 'password.request' }" class="small ml-auto my-auto underline">
 									{{ $t('forgot_password') }}
 								</router-link>
 							</div>

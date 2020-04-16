@@ -23,7 +23,7 @@
                     <div class="flex">
                     	<template v-if="token"> 
 							<button id="userButton" class="flex items-center focus:outline-none mr-3" @click="dropdown()">
-                                <avatar :username="user.name" v-if="user" backgroundColor="#7F9CF5"></avatar> 
+                                <avatar :username="user.name" v-if="user" backgroundColor="#276749" :size="30"></avatar>
                                 <span v-if="user" class="hidden md:inline-block ml-1">Hi, {{ user.name }}</span>
                             </button>
 						</template>

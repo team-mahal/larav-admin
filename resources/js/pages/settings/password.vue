@@ -1,6 +1,6 @@
 <template>
   <card :title="$t('your_password')">
-    <form @submit.prevent="update" @keydown="form.onKeydown($event)">
+    <form class="bg-white shadow-lg rounded px-8 pt-6 pb-8 mb-4" @submit.prevent="update" @keydown="form.onKeydown($event)">
       <alert-success :form="form" :message="$t('password_updated')" />
 
       <!-- Password -->
