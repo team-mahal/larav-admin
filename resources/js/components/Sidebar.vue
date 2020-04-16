@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="site-bar">
 
     <div v-if="ismobile=='m'" id="sidebar" class="h-screen w-10 menu bg-white text-white px-0 lex nunito static fixed shadow">
         <ul class="list-reset w-full">
@@ -48,17 +48,13 @@
                     </svg>
                </div>
             </li>
-            <router-link to="/">
-                <li class="text-center text-green-900 py-1">
-                    <h2 class="text-sm p-2 text-4xl text-center">
-                        <router-link to="/">
-                            <img src="/logo.png" alt="" class="w-40">
-                        </router-link>
-                    </h2>
-                </li>
-            </router-link>
+            <li class="text-center text-green-900 py-1">
+                <h2 class="text-sm p-2 text-4xl text-center">
+                    <img src="/logo.png" alt="" class="w-40">
+                </h2>
+            </li>
             <li class="my-2 md:my-0">   
-                <a href="#" class="block justify-center hover:justify-start md:md:justify-start py-2 pl-1 align-middle text-gray-600 no-underline hover:text-indigo-400 flex items-center">
+                <router-link to="/" class="py-2 pl-1 text-gray-600 no-underline hover:text-green-200 flex items-center">
                     <svg aria-hidden="true" data-prefix="fad" data-icon="house-damage" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-4 h-4">
                         <g class="fa-group">
                             <path fill="currentColor" d="M512 311.08V496a16 16 0 01-16 16H319.82l-39.92-55.26 104.11-64L236 256l60.11 119.2L192 439.18 229.24 512H80a16 16 0 01-16-16V311c1.78-1.21 3.85-1.89 5.47-3.35L288 115l218.74 192.9c1.55 1.36 3.57 2.02 5.26 3.18z" class="fa-secondary"/>
@@ -66,11 +62,12 @@
                         </g>
                     </svg>
                     <span class="w-full inline-block pb-1 md:pb-0 text-sm pl-2 hidden sm:hidden md:block lg:block xl:block">Home</span>
-                </a>
+                </router-link>
             </li>
             <li class="my-2 md:my-0">
-                <router-link to="/users" class="block py-2 justify-center md:md:justify-start pl-1 align-middle text-gray-600 no-underline hover:text-indigo-400">
-                    <span class="w-full inline-block pb-1 md:pb-0 text-sm hidden sm:hidden md:block lg:block xl:block active">Users</span>
+                <router-link to="/users" class="py-2 pl-1 text-gray-600 no-underline hover:text-green-200 flex items-center">
+                  <svg class="w-4 h-4" aria-hidden="true" data-prefix="fad" data-icon="users" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><g class="fa-group"><path fill="currentColor" d="M96 224a64 64 0 10-64-64 64.06 64.06 0 0064 64zm480 32h-64a63.81 63.81 0 00-45.1 18.6A146.27 146.27 0 01542 384h66a32 32 0 0032-32v-32a64.06 64.06 0 00-64-64zm-512 0a64.06 64.06 0 00-64 64v32a32 32 0 0032 32h65.9a146.64 146.64 0 0175.2-109.4A63.81 63.81 0 00128 256zm480-32a64 64 0 10-64-64 64.06 64.06 0 0064 64z" class="fa-secondary"/><path fill="currentColor" d="M396.8 288h-8.3a157.53 157.53 0 01-68.5 16c-24.6 0-47.6-6-68.5-16h-8.3A115.23 115.23 0 00128 403.2V432a48 48 0 0048 48h288a48 48 0 0048-48v-28.8A115.23 115.23 0 00396.8 288zM320 256a112 112 0 10-112-112 111.94 111.94 0 00112 112z" class="fa-primary"/></g></svg>
+                    <span class="w-full inline-block pb-1 md:pb-0 text-sm pl-2 hidden sm:hidden md:block lg:block xl:block">Users</span>
                 </router-link>
             </li>
         </ul>
@@ -96,6 +93,11 @@
 </script>
 
 <style>
+    .site-bar .router-link-exact-active{
+        color: #68D391;
+        border-right: 2px solid;
+        background: #EDF2F7;
+    }
     .posation{
         right: 1%;
         top: 20px;
