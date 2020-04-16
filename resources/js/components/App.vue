@@ -44,8 +44,31 @@ export default {
 	},
 	mounted () {
 		this.$loading = this.$refs.loading
+		this.$nextTick(function() {
+	      window.addEventListener('resize', this.getWindowWidth);
+
+	      //Init
+	      this.getWindowWidth()
+	    })
+	},
+	beforeDestroy() {
+	    window.removeEventListener('resize', this.getWindowWidth);
 	},
 	methods: {
+		getWindowWidth(event) {
+			let  clientWidth = document.documentElement.clientWidth
+			if(768>=clientWidth){
+             if(this.ismobile!='m'){
+                 let data='m';
+                 this.$store.dispatch('sidebar/setview1',{m:data})
+             }
+            }else{
+             if(this.ismobile!='d'){
+                    let data='d';
+                    this.$store.dispatch('sidebar/setview1',{m:data})
+                }
+            }
+      	},
 		/**
 		 * Set the application layout.
 		 *

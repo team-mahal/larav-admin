@@ -28,7 +28,6 @@ export default {
         }),
     },
   mounted () {
-		this.$loading = this.$refs.loading
 		// window.onresize = () => {
 		// 	console.log("ssssssssss");
 	 //        if(768>=window.innerWidth){
