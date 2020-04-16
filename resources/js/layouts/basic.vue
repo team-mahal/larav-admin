@@ -22,27 +22,6 @@ export default {
   	computed: mapGetters({
         ismobile: 'sidebar/ismobile'
     }),
-     computed: {
-        ...mapGetters({
-            ismobile: 'sidebar/ismobile'
-        }),
-    },
-  mounted () {
-		// window.onresize = () => {
-		// 	console.log("ssssssssss");
-	 //        if(768>=window.innerWidth){
-	 //        	if(this.ismobile!='m'){
-	 //            	let data='m';
-	 //            	this.$store.dispatch('sidebar/setview1',{m:data})
-	 //        	}
-	 //        }else{
-	 //        	if(this.ismobile!='d'){
-		//             let data='d';
-		//             this.$store.dispatch('sidebar/setview1',{m:data})
-		//         }
-	 //        }
-	 //    }
-	},
 	name: 'BasicLayout'
 };
 </script>

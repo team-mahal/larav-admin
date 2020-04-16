@@ -38,7 +38,7 @@
         </ul>
     </div>
     
-    <div v-else id="sidebar" class="h-screen w-64 menu bg-white text-white px-0 md:px-4 flex nunito static fixed shadow">
+    <div v-else id="sidebar" class="h-screen w-64 menu bg-white text-white flex nunito static fixed shadow">
         <ul class="list-reset w-full">
             <li class="relative">
                <div class="absolute z-20 posation cursor-pointer" @click="taggleview()">
@@ -50,9 +50,9 @@
             </li>
             <router-link to="/">
                 <li class="text-center text-green-900 py-1">
-                    <h2 class="text-sm py-4 md:py-0 md:text-4xl">
+                    <h2 class="text-sm p-2 text-4xl text-center">
                         <router-link to="/">
-                            <img src="/logo.png" alt="" class="w-48">
+                            <img src="/logo.png" alt="" class="w-40">
                         </router-link>
                     </h2>
                 </li>
@@ -97,8 +97,8 @@
 
 <style>
     .posation{
-        right: -5%;
-        top: 21px;
+        right: 1%;
+        top: 20px;
     }
     .posationm{
         right: 18%;
