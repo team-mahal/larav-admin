@@ -70,6 +70,34 @@
                     <span class="w-full inline-block pb-1 md:pb-0 text-sm pl-2 hidden sm:hidden md:block lg:block xl:block">Users</span>
                 </router-link>
             </li>
+            <li class="my-2 md:my-0">
+                <div class="py-2 pl-1 text-gray-600 no-underline hover:text-green-200 flex items-center cursor-pointer" @click="toggle()">
+                  <svg class="w-4 h-4" aria-hidden="true" data-prefix="fad" data-icon="users" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><g class="fa-group"><path fill="currentColor" d="M96 224a64 64 0 10-64-64 64.06 64.06 0 0064 64zm480 32h-64a63.81 63.81 0 00-45.1 18.6A146.27 146.27 0 01542 384h66a32 32 0 0032-32v-32a64.06 64.06 0 00-64-64zm-512 0a64.06 64.06 0 00-64 64v32a32 32 0 0032 32h65.9a146.64 146.64 0 0175.2-109.4A63.81 63.81 0 00128 256zm480-32a64 64 0 10-64-64 64.06 64.06 0 0064 64z" class="fa-secondary"/><path fill="currentColor" d="M396.8 288h-8.3a157.53 157.53 0 01-68.5 16c-24.6 0-47.6-6-68.5-16h-8.3A115.23 115.23 0 00128 403.2V432a48 48 0 0048 48h288a48 48 0 0048-48v-28.8A115.23 115.23 0 00396.8 288zM320 256a112 112 0 10-112-112 111.94 111.94 0 00112 112z" class="fa-primary"/></g></svg>
+                    <span class="w-full inline-block pb-1 md:pb-0 text-sm pl-2 hidden sm:hidden md:block lg:block xl:block">Users</span>
+                </div>
+                <ul class="list-reset w-full block" v-if="">
+                    <li class="my-2 md:my-0">   
+                        <router-link to="/" class="py-2 pl-1 text-gray-600 no-underline hover:text-green-200 flex items-center">
+                            <span class="w-full inline-block pb-1 md:pb-0 text-sm pl-2 hidden sm:hidden md:block lg:block xl:block pl-10">Home</span>
+                        </router-link>
+                    </li>
+                    <li class="my-2 md:my-0">   
+                        <router-link to="/df" class="py-2 pl-1 text-gray-600 no-underline hover:text-green-200 flex items-center">
+                            <span class="w-full inline-block pb-1 md:pb-0 text-sm pl-2 hidden sm:hidden md:block lg:block xl:block pl-10">Component</span>
+                        </router-link>
+                    </li>
+                    <li class="my-2 md:my-0">   
+                        <router-link to="/sdf" class="py-2 pl-1 text-gray-600 no-underline hover:text-green-200 flex items-center">
+                            <span class="w-full inline-block pb-1 md:pb-0 text-sm pl-2 hidden sm:hidden md:block lg:block xl:block pl-10">Avatar</span>
+                        </router-link>
+                    </li>
+                    <li class="my-2 md:my-0">   
+                        <router-link to="/ssdf" class="py-2 pl-1 text-gray-600 no-underline hover:text-green-200 flex items-center">
+                            <span class="w-full inline-block pb-1 md:pb-0 text-sm pl-2 hidden sm:hidden md:block lg:block xl:block pl-10">Test</span>
+                        </router-link>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </div>
     
@@ -79,6 +107,9 @@
 <script>
     import { mapGetters } from 'vuex'
     export default{
+        data: () => ({
+            children: false,
+        }),
         computed: {
             ...mapGetters({
                 ismobile: 'sidebar/ismobile'
