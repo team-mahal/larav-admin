@@ -64,40 +64,30 @@
                     <span class="w-full inline-block pb-1 md:pb-0 text-sm pl-2 hidden sm:hidden md:block lg:block xl:block">Home</span>
                 </router-link>
             </li>
-            <li class="my-2 md:my-0">
-                <router-link to="/users" class="py-2 pl-1 text-gray-600 no-underline hover:text-green-200 flex items-center">
+
+            <li class="my-2 md:my-0" v-for="(item,index) in navitem">
+                <router-link v-if="item.link" :to="item.link" class="py-2 pl-1 text-gray-600 no-underline hover:text-green-200 flex items-center">
                   <svg class="w-4 h-4" aria-hidden="true" data-prefix="fad" data-icon="users" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><g class="fa-group"><path fill="currentColor" d="M96 224a64 64 0 10-64-64 64.06 64.06 0 0064 64zm480 32h-64a63.81 63.81 0 00-45.1 18.6A146.27 146.27 0 01542 384h66a32 32 0 0032-32v-32a64.06 64.06 0 00-64-64zm-512 0a64.06 64.06 0 00-64 64v32a32 32 0 0032 32h65.9a146.64 146.64 0 0175.2-109.4A63.81 63.81 0 00128 256zm480-32a64 64 0 10-64-64 64.06 64.06 0 0064 64z" class="fa-secondary"/><path fill="currentColor" d="M396.8 288h-8.3a157.53 157.53 0 01-68.5 16c-24.6 0-47.6-6-68.5-16h-8.3A115.23 115.23 0 00128 403.2V432a48 48 0 0048 48h288a48 48 0 0048-48v-28.8A115.23 115.23 0 00396.8 288zM320 256a112 112 0 10-112-112 111.94 111.94 0 00112 112z" class="fa-primary"/></g></svg>
-                    <span class="w-full inline-block pb-1 md:pb-0 text-sm pl-2 hidden sm:hidden md:block lg:block xl:block">Users</span>
+                    <span class="w-full inline-block pb-1 md:pb-0 text-sm pl-2 hidden sm:hidden md:block lg:block xl:block">{{ item.name }}</span>
                 </router-link>
-            </li>
-            <li class="my-2 md:my-0">
-                <div class="py-2 pl-1 text-gray-600 no-underline hover:text-green-200 flex items-center cursor-pointer" @click="toggle()">
-                  <svg class="w-4 h-4" aria-hidden="true" data-prefix="fad" data-icon="users" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><g class="fa-group"><path fill="currentColor" d="M96 224a64 64 0 10-64-64 64.06 64.06 0 0064 64zm480 32h-64a63.81 63.81 0 00-45.1 18.6A146.27 146.27 0 01542 384h66a32 32 0 0032-32v-32a64.06 64.06 0 00-64-64zm-512 0a64.06 64.06 0 00-64 64v32a32 32 0 0032 32h65.9a146.64 146.64 0 0175.2-109.4A63.81 63.81 0 00128 256zm480-32a64 64 0 10-64-64 64.06 64.06 0 0064 64z" class="fa-secondary"/><path fill="currentColor" d="M396.8 288h-8.3a157.53 157.53 0 01-68.5 16c-24.6 0-47.6-6-68.5-16h-8.3A115.23 115.23 0 00128 403.2V432a48 48 0 0048 48h288a48 48 0 0048-48v-28.8A115.23 115.23 0 00396.8 288zM320 256a112 112 0 10-112-112 111.94 111.94 0 00112 112z" class="fa-primary"/></g></svg>
-                    <span class="w-full inline-block pb-1 md:pb-0 text-sm pl-2 hidden sm:hidden md:block lg:block xl:block">Users</span>
+                <div v-else class="py-2 pl-1 text-gray-600 no-underline hover:text-green-200 flex items-center cursor-pointer" @click="toggle(index)">
+                    <svg class="w-4 h-4" aria-hidden="true" data-prefix="fad" data-icon="users" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><g class="fa-group"><path fill="currentColor" d="M96 224a64 64 0 10-64-64 64.06 64.06 0 0064 64zm480 32h-64a63.81 63.81 0 00-45.1 18.6A146.27 146.27 0 01542 384h66a32 32 0 0032-32v-32a64.06 64.06 0 00-64-64zm-512 0a64.06 64.06 0 00-64 64v32a32 32 0 0032 32h65.9a146.64 146.64 0 0175.2-109.4A63.81 63.81 0 00128 256zm480-32a64 64 0 10-64-64 64.06 64.06 0 0064 64z" class="fa-secondary"/><path fill="currentColor" d="M396.8 288h-8.3a157.53 157.53 0 01-68.5 16c-24.6 0-47.6-6-68.5-16h-8.3A115.23 115.23 0 00128 403.2V432a48 48 0 0048 48h288a48 48 0 0048-48v-28.8A115.23 115.23 0 00396.8 288zM320 256a112 112 0 10-112-112 111.94 111.94 0 00112 112z" class="fa-primary"/></g></svg>
+
+                    <span class="w-full inline-block pb-1 md:pb-0 text-sm pl-2 hidden sm:hidden md:block lg:block xl:block">{{ item.name }}</span>
+
+                    <svg class="w-4 h-4" v-if="!item.collapsed" aria-hidden="true" data-prefix="fas" data-icon="angle-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg>
+
+                    <svg class="w-4 h-4" v-else aria-hidden="true" data-prefix="fas" data-icon="angle-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" ><path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"/></svg>
                 </div>
-                <ul class="list-reset w-full block" v-if="">
-                    <li class="my-2 md:my-0">   
-                        <router-link to="/" class="py-2 pl-1 text-gray-600 no-underline hover:text-green-200 flex items-center">
-                            <span class="w-full inline-block pb-1 md:pb-0 text-sm pl-2 hidden sm:hidden md:block lg:block xl:block pl-10">Home</span>
-                        </router-link>
-                    </li>
-                    <li class="my-2 md:my-0">   
-                        <router-link to="/df" class="py-2 pl-1 text-gray-600 no-underline hover:text-green-200 flex items-center">
-                            <span class="w-full inline-block pb-1 md:pb-0 text-sm pl-2 hidden sm:hidden md:block lg:block xl:block pl-10">Component</span>
-                        </router-link>
-                    </li>
-                    <li class="my-2 md:my-0">   
-                        <router-link to="/sdf" class="py-2 pl-1 text-gray-600 no-underline hover:text-green-200 flex items-center">
-                            <span class="w-full inline-block pb-1 md:pb-0 text-sm pl-2 hidden sm:hidden md:block lg:block xl:block pl-10">Avatar</span>
-                        </router-link>
-                    </li>
-                    <li class="my-2 md:my-0">   
-                        <router-link to="/ssdf" class="py-2 pl-1 text-gray-600 no-underline hover:text-green-200 flex items-center">
-                            <span class="w-full inline-block pb-1 md:pb-0 text-sm pl-2 hidden sm:hidden md:block lg:block xl:block pl-10">Test</span>
+                <ul class="list-reset w-full block" v-if="item.child && item.collapsed">
+                    <li class="my-2 md:my-0" v-for="i in item.child">   
+                        <router-link :to="i.link" class="py-2 pl-1 text-gray-600 no-underline hover:text-green-200 flex items-center">
+                            <span class="w-full inline-block pb-1 md:pb-0 text-sm pl-2 hidden sm:hidden md:block lg:block xl:block pl-10">{{ i.name }}</span>
                         </router-link>
                     </li>
                 </ul>
             </li>
+
         </ul>
     </div>
     
@@ -109,6 +99,39 @@
     export default{
         data: () => ({
             children: false,
+            navitem:[
+                {
+                    name:'Users',
+                    link:'/users'
+                },
+                {
+                    name:'Test',
+                    link:'',
+                    collapsed:false,
+                    child:[
+                        {
+                            name:"Test",
+                            link:'/asas/as'
+                        },
+                        {
+                            name:"Test",
+                            link:'/asas/werewr'
+                        },
+                        {
+                            name:"Test",
+                            link:'/asas/dfsdfs'
+                        },
+                        {
+                            name:"Test",
+                            link:'/asas/sdfsf'
+                        },
+                        {
+                            name:"Test",
+                            link:'/asas/sdfsdf'
+                        }
+                    ]
+                },
+            ]
         }),
         computed: {
             ...mapGetters({
@@ -116,6 +139,9 @@
             }),
         },
         methods:{
+            toggle(index){
+                this.navitem[index].collapsed=!this.navitem[index].collapsed;
+            },
             taggleview(){
                 this.$store.dispatch('sidebar/setview')
             }
