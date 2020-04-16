@@ -2,9 +2,6 @@
     <button
         :class="classes"
         @click="click(data)" title="Update">
-        <span>
-            <i class="fas fa-eye" aria-hidden="true"></i>
-        </span>
         Edit
     </button>
 </template>

@@ -1,7 +1,7 @@
 <template>
 <div>
 	<div class="text-right">
-		<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded" @click="$refs.modal.show()">
+		<button class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-2 border border-green-700 rounded" @click="$refs.modal.show()">
 		  {{ updateData ? 'Update' : 'Create' }}
 		</button>
 	</div> 
@@ -39,7 +39,7 @@
 
 <script>
 import Loading from 'vue-loading-overlay';
-import EditButon from '../buttons/EditButton.vue';
+import EditButon from '../components/EditButton.vue';
 import Form from 'vform'
 import axios from 'axios'
 export default {
@@ -86,14 +86,14 @@ export default {
                     name: 'Edit',
                     orderable: false,
                     classes: {
-                        'btn': true,
-                        'btn-blue': true,
-                        'bg-blue-500': true,
-                        'hover:bg-blue-700': true,
-                        'py-2': true,
+                        'bg-green-500': true,
+                        'hover:bg-green-700': true,
+                        'py-1': true,
+                        'my-1': true,
                         'text-white': true,
+                        'text-xs': true,
                         'font-bold': true,
-                        'px-4': true,
+                        'px-2': true,
                         'rounded': true,
                         'float-right': true
                     },
@@ -107,49 +107,31 @@ export default {
                     'justify-center': true,
                     'w-full': true,
                     'flex': true,
-                    "border-gray-200": true,
                     'inline-block': true,
-                    'min-w-full': true,
-                    'rounded-lg': true,
                     'overflow-hidden': true,
                 },
                 table: {
                     'text-left': true,
                     'w-full': true,
-                },
-                "t-body": {
                     'bg-white': true,
                 },
-                "t-head-tr": {
-                    'border-b': true,
-                    'border-gray': true,
-                },
-                "t-body-tr": {
-                    'stripped-table': true,
-                    'bg-grey-darkest': true,
-                },
                 "td": {
-                    'py-4': true,
-                    'px-6': true,
-                    'border-b': true,
-                    'border-grey-light': true,
-                    'text-gray-light': true,
+                    'py-0': true,
+                    'px-4': true,
+                    'border': true,
+                    'border-gray-400': true,
                 },
                 "th": {
-                    'text-gray-dark': true,
-                    'border-gray': true,
-                    'border-b-2': true,
-                    'border-t-2': true,
-                    'border-gray-200': true,
-                    'py-3': true,
-                    'px-4': true,
-                    'bg-gray-100': true,
+                    'py-0': true,
+                    'border-gray-400': true,
+                    'cursor-pointer': true,
+                    'py-2': true,
+                    'px-2': true,
+                    'border': true,
                     'text-left': true,
                     'text-xs': true,
                     'font-semibold': true,
-                    'text-gray-600': true,
                     'uppercase': true,
-                    'tracking-wider': true,
                 },
             },
             column:[]
@@ -166,7 +148,6 @@ export default {
             this.errors = {};
         },
     	async storeOrUpdate () {
-            // Submit the form.
             if(this.updateData) {
                 const response = await this.form.put('/api/users/'+this.form.id);
                 if (response.status === 200) {
@@ -198,16 +179,6 @@ export default {
                 this.clients = response.data;
             }
         }
-    },
-    created(){
-        // var self = this;
-        // axios.get('/api/users/create').then(function (response) {
-        //     self.form.originalData=response.data;
-        // }).catch(function (error) {
-        //     console.log(error);
-        // }).then(function () {
-        //     // always executed
-        // });
     }
 }
 </script>
