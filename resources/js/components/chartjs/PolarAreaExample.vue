@@ -9,11 +9,11 @@ export default {
       datasets: [
         {
           label: 'My First dataset',
-          backgroundColor: 'rgba(179,181,198,0.2)',
-          pointBackgroundColor: 'rgba(179,181,198,1)',
+          backgroundColor: '#48BB78',
+          pointBackgroundColor: '#A0AEC0',
           pointBorderColor: '#fff',
           pointHoverBackgroundColor: '#fff',
-          pointHoverBorderColor: 'rgba(179,181,198,1)',
+          pointHoverBorderColor: '#48BB78',
           data: [65, 59, 90, 81, 56, 55, 40]
         },
         {

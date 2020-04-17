@@ -8,7 +8,7 @@ export default {
       datasets: [
         {
           label: 'Data One',
-          backgroundColor: '#f87979',
+          backgroundColor: '#F56565',
           data: [
             {
               x: 20,
@@ -29,7 +29,7 @@ export default {
         },
         {
           label: 'Data Two',
-          backgroundColor: '#7C8CF8',
+          backgroundColor: '#48BB78',
           data: [
             {
               x: 10,

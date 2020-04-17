@@ -37,7 +37,7 @@ export default {
       datasets: [
         {
           label: 'Data One',
-          backgroundColor: '#f87979',
+          backgroundColor: '#48BB78',
           data: [40, 39, 10, 40, 39, 80, 40]
         }
       ]

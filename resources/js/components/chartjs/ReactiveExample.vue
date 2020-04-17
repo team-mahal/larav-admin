@@ -31,7 +31,7 @@ export default {
         datasets: [
           {
             label: 'Data One',
-            backgroundColor: '#f87979',
+            backgroundColor: '#F56565',
             data: [this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt()]
           }
         ]
