@@ -101,9 +101,37 @@
             children: false,
             navitem:[
                 {
-                    name:'Users',
+                    name:'Datatables',
                     link:'/users',
                     icon:'<svg class="w-4 h-4 fill-current" aria-hidden="true" data-prefix="fad" data-icon="users" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><g class="fa-group"><path fill="currentColor" d="M96 224a64 64 0 10-64-64 64.06 64.06 0 0064 64zm480 32h-64a63.81 63.81 0 00-45.1 18.6A146.27 146.27 0 01542 384h66a32 32 0 0032-32v-32a64.06 64.06 0 00-64-64zm-512 0a64.06 64.06 0 00-64 64v32a32 32 0 0032 32h65.9a146.64 146.64 0 0175.2-109.4A63.81 63.81 0 00128 256zm480-32a64 64 0 10-64-64 64.06 64.06 0 0064 64z" class="fa-secondary"/><path fill="currentColor" d="M396.8 288h-8.3a157.53 157.53 0 01-68.5 16c-24.6 0-47.6-6-68.5-16h-8.3A115.23 115.23 0 00128 403.2V432a48 48 0 0048 48h288a48 48 0 0048-48v-28.8A115.23 115.23 0 00396.8 288zM320 256a112 112 0 10-112-112 111.94 111.94 0 00112 112z" class="fa-primary"/></g></svg>'
+                },
+                {
+                    name:'Components',
+                    link:'',
+                    icon:'<svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M0 0h54.857v54.857H0V0zm0 73.143h54.857V128H0V73.143zm73.143 0H128V128H73.143V73.143zm27.428-18.286C115.72 54.857 128 42.577 128 27.43 128 12.28 115.72 0 100.571 0 85.423 0 73.143 12.28 73.143 27.429c0 15.148 12.28 27.428 27.428 27.428z"/></svg>',
+                    collapsed:false,
+                    child:[
+                        {
+                            name:"Charts",
+                            link:'/components/charts'
+                        },
+                        {
+                            name:"Test",
+                            link:'/asas/werewr'
+                        },
+                        {
+                            name:"Test",
+                            link:'/asas/dfsdfs'
+                        },
+                        {
+                            name:"Test",
+                            link:'/asas/sdfsf'
+                        },
+                        {
+                            name:"Test",
+                            link:'/asas/sdfsdf'
+                        }
+                    ]
                 },
                 {
                     name:'Components',
