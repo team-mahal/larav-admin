@@ -150,7 +150,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import MonthlyIncome from './../components/MonthlyIncome.vue'
+import MonthlyIncome from './../components/chartjs/MonthlyIncome.vue'
 export default {
 	layout: 'basic',
 	components: { MonthlyIncome },
