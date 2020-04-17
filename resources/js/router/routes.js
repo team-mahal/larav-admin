@@ -10,10 +10,15 @@ export default [
 	{ path: '/password/reset/:token', name: 'password.reset', component: page('auth/password/reset.vue') },
 	{ path: '/email/verify/:id', name: 'verification.verify', component: page('auth/verification/verify.vue') },
 	{ path: '/email/resend', name: 'verification.resend', component: page('auth/verification/resend.vue') },
-	{ path: '/users', name: 'users', component: page('Users.vue') },
-	{ path: '/components', name: 'components', component: page('components/Charts.vue'),
+	{ path: '/users', name: 'users', component: page('users.vue') },
+	{ path: '/components', name: 'components', component: page('components/charts.vue'),
 		children: [
-			{ path: 'charts', name: 'components.charts', component: page('components/Charts.vue') },
+			{ path: 'charts', name: 'components.charts', component: page('components/charts.vue') },
+		]
+	}, 
+	{ path: '/uielements', name: 'uielements', component: page('uielements/buttons.vue'),
+		children: [
+			{ path: 'buttons', name: 'uielements.buttons', component: page('uielements/buttons.vue') },
 		]
 	},  
 	{ path: '/settings',

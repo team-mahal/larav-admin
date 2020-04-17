@@ -134,14 +134,14 @@
                     ]
                 },
                 {
-                    name:'Components',
+                    name:'UI Elements',
                     link:'',
-                    icon:'<svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M0 0h54.857v54.857H0V0zm0 73.143h54.857V128H0V73.143zm73.143 0H128V128H73.143V73.143zm27.428-18.286C115.72 54.857 128 42.577 128 27.43 128 12.28 115.72 0 100.571 0 85.423 0 73.143 12.28 73.143 27.429c0 15.148 12.28 27.428 27.428 27.428z"/></svg>',
+                    icon:'<svg aria-hidden="true" data-prefix="fas" data-icon="laptop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="w-4 h-4 fill-current"><path fill="currentColor" d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg>',
                     collapsed:false,
                     child:[
                         {
-                            name:"Charts",
-                            link:'/components/charts'
+                            name:"Buttons",
+                            link:'/uielements/buttons'
                         },
                         {
                             name:"Test",
