@@ -86,7 +86,7 @@
                             <span class="w-full inline-block pb-1 md:pb-0 text-sm pl-2 hidden sm:hidden md:block lg:block xl:block pl-10">{{ i.name }}</span>
                         </router-link>
 
-                        <div v-else class="ml-2 py-2 pl-1 text-gray-600 no-underline hover:text-green-200 flex items-center cursor-pointer" @click="toggle(index1)">
+                        <div v-else class="ml-2 py-2 pl-1 text-gray-600 no-underline hover:text-green-200 flex items-center cursor-pointer" @click="toggles(index,index1)">
                             <span v-html="i.icon"></span>
 
                             <span class="w-full inline-block pb-1 md:pb-0 text-sm pl-2 hidden sm:hidden md:block lg:block xl:block">{{ i.name }}</span>
@@ -95,8 +95,8 @@
 
                             <svg class="w-4 h-4" v-else aria-hidden="true" data-prefix="fas" data-icon="angle-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" ><path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"/></svg>
                         </div>
-                        <ul class="list-reset w-full block" >
-                            <li class="my-2 md:my-0" v-for="j in i.child" v-if="i.child"> 
+                        <ul class="list-reset w-full block ml-2" >
+                            <li class="my-2 md:my-0" v-for="j in i.child" v-if="i.child && i.collapsed"> 
                                 <router-link :to="j.link" class="py-2 pl-1 text-gray-600 no-underline hover:text-green-200 flex items-center">
                                     <span class="w-full inline-block pb-1 md:pb-0 text-sm pl-2 hidden sm:hidden md:block lg:block xl:block pl-10">{{ j.name }}</span>
                                 </router-link>
@@ -205,6 +205,9 @@
         methods:{
             toggle(index){
                 this.navitem[index].collapsed=!this.navitem[index].collapsed;
+            },
+            toggles(index,index1){
+                this.navitem[index].child[index1].collapsed=!this.navitem[index].child[index1].collapsed;
             },
             taggleview(){
                 this.$store.dispatch('sidebar/setview')
