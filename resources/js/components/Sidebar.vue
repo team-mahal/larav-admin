@@ -80,10 +80,20 @@
                     <svg class="w-4 h-4" v-else aria-hidden="true" data-prefix="fas" data-icon="angle-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" ><path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"/></svg>
                 </div>
                 <ul class="list-reset w-full block" v-if="item.child && item.collapsed">
-                    <li class="my-2 md:my-0" v-for="i in item.child">   
-                        <router-link :to="i.link" class="py-2 pl-1 text-gray-600 no-underline hover:text-green-200 flex items-center">
+                    <li class="my-2 md:my-0" v-for="i in item.child"> 
+
+                        <ul class="list-reset w-full block" v-if="i.child">
+                            <li class="my-2 md:my-0" v-for="j in i.child" v-if="i.child"> 
+                                <router-link :to="j.link" class="py-2 pl-1 text-gray-600 no-underline hover:text-green-200 flex items-center">
+                                    <span class="w-full inline-block pb-1 md:pb-0 text-sm pl-2 hidden sm:hidden md:block lg:block xl:block pl-10">{{ j.name }}</span>
+                                </router-link>
+                            </li>
+                        </ul>
+
+                        <router-link v-else :to="i.link" class="py-2 pl-1 text-gray-600 no-underline hover:text-green-200 flex items-center">
                             <span class="w-full inline-block pb-1 md:pb-0 text-sm pl-2 hidden sm:hidden md:block lg:block xl:block pl-10">{{ i.name }}</span>
                         </router-link>
+
                     </li>
                 </ul>
             </li>
@@ -113,8 +123,8 @@
                     child:[
                         {
                             name:"Charts",
-                            link:'/components/charts'
-                        },
+                            link:'/components/charts',
+                        },  
                         {
                             name:"Test",
                             link:'/asas/werewr'
@@ -141,7 +151,22 @@
                     child:[
                         {
                             name:"Buttons",
-                            link:'/uielements/buttons'
+                            link:'/uielements/buttons',
+                            collapsed:false,
+                            child:[
+                                {
+                                    name:"Buttons",
+                                    link:'/uielements/buttons',
+                                },
+                                {
+                                    name:"Buttons",
+                                    link:'/uielements/buttons',
+                                },
+                                {
+                                    name:"Buttons",
+                                    link:'/uielements/buttons',
+                                },
+                            ],
                         },
                         {
                             name:"Test",
