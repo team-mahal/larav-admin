@@ -2,91 +2,97 @@
 <div>
 	<h2 class="text-xl text-center font-bold">Outlined Buttons</h2>
 	<div class="flex flex-wrap justify-center mt-3">
-		<button class="ml-3 bg-white hover:bg-gray-500 hover:text-white text-gray-500 font-semibold py-2 px-4 border border-gray-500 rounded shadow">
+		<button class="ml-3 bg-white hover:bg-gray-500 hover:text-white text-gray-500 py-2 px-4 border border-gray-500 shadow-xl">
 		  Button
 		</button>
-		<button class="ml-3 bg-white hover:bg-red-500 hover:text-white text-red-500 font-semibold py-2 px-4 border border-red-500 rounded shadow">
+		<button class="ml-3 bg-white hover:bg-red-500 hover:text-white text-red-500 py-2 px-4 border border-red-500 shadow-xl">
 		  Button
 		</button>
-		<button class="ml-3 bg-white hover:bg-orange-500 hover:text-white text-orange-500 font-semibold py-2 px-4 border border-orange-500 rounded shadow">
+		<button class="ml-3 bg-white hover:bg-orange-500 hover:text-white text-orange-500 py-2 px-4 border border-orange-500 shadow-xl">
 		  Button
 		</button>
-		<button class="ml-3 bg-white hover:bg-yellow-500 hover:text-white text-yellow-500 font-semibold py-2 px-4 border border-yellow-500 rounded shadow">
+		<button class="ml-3 bg-white hover:bg-yellow-500 hover:text-white text-yellow-500 py-2 px-4 border border-yellow-500 shadow-xl">
 		  Button
 		</button>
-		<button class="ml-3 bg-white hover:bg-green-500 hover:text-white text-green-500 font-semibold py-2 px-4 border border-green-500 rounded shadow">
+		<button class="ml-3 bg-white hover:bg-green-500 hover:text-white text-green-500 py-2 px-4 border border-green-500 shadow-xl">
 		  Button
 		</button>
-		<button class="ml-3 bg-white hover:bg-green-900 hover:text-white text-green-900 font-semibold py-2 px-4 border border-green-900 rounded shadow">
+		<button class="ml-3 bg-white hover:bg-green-900 hover:text-white text-green-900 py-2 px-4 border border-green-900 shadow-xl">
 		  Button
 		</button>
-		<button class="ml-3 bg-white hover:bg-teal-500 hover:text-white text-teal-500 font-semibold py-2 px-4 border border-teal-500 rounded shadow">
+		<button class="ml-3 bg-white hover:bg-teal-500 hover:text-white text-teal-500 py-2 px-4 border border-teal-500 shadow-xl">
 		  Button
 		</button>
-		<button class="ml-3 bg-white hover:bg-blue-500 hover:text-white text-blue-500 font-semibold py-2 px-4 border border-blue-500 rounded shadow">
+		<button class="ml-3 bg-white hover:bg-blue-500 hover:text-white text-blue-500 py-2 px-4 border border-blue-500 shadow-xl">
 		  Button
 		</button>
-		<button class="ml-3 bg-white hover:bg-indigo-500 hover:text-white text-indigo-500 font-semibold py-2 px-4 border border-indigo-500 rounded shadow">
+		<button class="ml-3 bg-white hover:bg-indigo-500 hover:text-white text-indigo-500 py-2 px-4 border border-indigo-500 shadow-xl">
 		  Button
 		</button>
-		<button class="ml-3 bg-white hover:bg-purple-500 hover:text-white text-purple-500 font-semibold py-2 px-4 border border-purple-500 rounded shadow">
+		<button class="ml-3 bg-white hover:bg-purple-500 hover:text-white text-purple-500 py-2 px-4 border border-purple-500 shadow-xl">
 		  Button
 		</button>
-		<button class="ml-3 bg-white hover:bg-pink-500 hover:text-white text-pink-500 font-semibold py-2 px-4 border border-pink-500 rounded shadow">
+		<button class="ml-3 bg-white hover:bg-pink-500 hover:text-white text-pink-500 py-2 px-4 border border-pink-500 shadow-xl">
 		  Button
 		</button>
 	</div>
 
 	<div class="flex flex-wrap justify-center mt-3">
-		<button class="ml-3 bg-white hover:bg-gray-500 hover:text-white text-gray-500 font-semibold py-2 px-4 border border-gray-500 rounded-full shadow">
+		<button class="ml-3 bg-white hover:bg-gray-500 hover:text-white text-gray-500 font-bold py-2 px-4 border border-gray-500 rounded-full shadow-lg">
 		  Button
 		</button>
-		<button class="ml-3 bg-white hover:bg-red-500 hover:text-white text-red-500 font-semibold py-2 px-4 border border-red-500 rounded-full shadow">
+		<button class="ml-3 bg-white hover:bg-red-500 hover:text-white text-red-500 font-bold py-2 px-5 border border-red-500 rounded-full shadow-lg">
 		  Button
 		</button>
-		<button class="ml-3 bg-white hover:bg-orange-500 hover:text-white text-orange-500 font-semibold py-2 px-4 border border-orange-500 rounded-full shadow">
+		<button class="ml-3 bg-white hover:bg-orange-500 hover:text-white text-orange-500 font-bold py-2 px-5 border border-orange-500 rounded-full shadow-lg">
 		  Button
 		</button>
-		<button class="ml-3 bg-white hover:bg-yellow-500 hover:text-white text-yellow-500 font-semibold py-2 px-4 border border-yellow-500 rounded-full shadow">
+		<button class="ml-3 bg-white hover:bg-yellow-500 hover:text-white text-yellow-500 font-bold py-2 px-5 border border-yellow-500 rounded-full shadow-lg">
 		  Button
 		</button>
-		<button class="ml-3 bg-white hover:bg-green-500 hover:text-white text-green-500 font-semibold py-2 px-4 border border-green-500 rounded-full shadow">
+		<button class="ml-3 bg-white hover:bg-green-500 hover:text-white text-green-500 font-bold py-2 px-5 border border-green-500 rounded-full shadow-lg">
 		  Button
 		</button>
-		<button class="ml-3 bg-white hover:bg-green-900 hover:text-white text-green-900 font-semibold py-2 px-4 border border-green-900 rounded-full shadow">
+		<button class="ml-3 bg-white hover:bg-green-900 hover:text-white text-green-900 font-bold py-2 px-5 border border-green-900 rounded-full shadow-lg">
 		  Button
 		</button>
-		<button class="ml-3 bg-white hover:bg-teal-500 hover:text-white text-teal-500 font-semibold py-2 px-4 border border-teal-500 rounded-full shadow">
+		<button class="ml-3 bg-white hover:bg-teal-500 hover:text-white text-teal-500 font-bold py-2 px-5 border border-teal-500 rounded-full shadow-lg">
 		  Button
 		</button>
-		<button class="ml-3 bg-white hover:bg-blue-500 hover:text-white text-blue-500 font-semibold py-2 px-4 border border-blue-500 rounded-full shadow">
+		<button class="ml-3 bg-white hover:bg-blue-500 hover:text-white text-blue-500 font-bold py-2 px-5 border border-blue-500 rounded-full shadow-lg">
 		  Button
 		</button>
-		<button class="ml-3 bg-white hover:bg-indigo-500 hover:text-white text-indigo-500 font-semibold py-2 px-4 border border-indigo-500 rounded-full shadow">
+		<button class="ml-3 bg-white hover:bg-indigo-500 hover:text-white text-indigo-500 font-bold py-2 px-5 border border-indigo-500 rounded-full shadow-lg">
 		  Button
 		</button>
-		<button class="ml-3 bg-white hover:bg-purple-500 hover:text-white text-purple-500 font-semibold py-2 px-4 border border-purple-500 rounded-full shadow">
+		<button class="ml-3 bg-white hover:bg-purple-500 hover:text-white text-purple-500 font-bold py-2 px-5 border border-purple-500 rounded-full shadow-lg">
 		  Button
 		</button>
-		<button class="ml-3 bg-white hover:bg-pink-500 hover:text-white text-pink-500 font-semibold py-2 px-4 border border-pink-500 rounded-full shadow">
+		<button class="ml-3 bg-white hover:bg-pink-500 hover:text-white text-pink-500 font-bold py-2 px-5 border border-pink-500 rounded-full shadow-lg">
 		  Button
 		</button>
 	</div>
 
 	<div class="flex flex-wrap justify-center mt-3">
 		<div class="mb-5">
-            <a href="#" class="cursor-pointer bg-gray-500 hover:bg-gray-400 shadow-xl px-5 py-2 inline-block text-blue-100 hover:text-white rounded">Primary</a>
-            <button type="submit" class="cursor-pointer bg-red-500 hover:bg-red-600 shadow-xl px-5 py-2 inline-block text-orange-100 hover:text-white rounded">Warning</button>
-            <input type="button" class="cursor-pointer bg-red-600 hover:bg-red-500 shadow-xl px-5 py-2 inline-block text-orange-100 hover:text-white rounded" value="Danger">
-            <a href="#" class="cursor-pointer bg-gray-700 hover:bg-gray-600 shadow-xl px-5 py-2 inline-block text-blue-100 hover:text-white rounded">Inverse</a>
-            <a href="#" class="cursor-pointer bg-teal-600 hover:bg-teal-500 shadow-xl px-5 py-2 inline-block text-teal-100 hover:text-white rounded">Success</a>
+            <button class="bg-gray-600 hover:bg-gray-500 shadow-xl px-5 py-2 rounded text-white">Primary</button>
+            <button type="submit" class="bg-red-600 hover:bg-red-500 shadow-xl px-5 py-2 rounded text-white">Warning</button>
+            <button type="submit" class="bg-orange-600 hover:bg-orange-500 shadow-xl px-5 py-2 rounded text-white">Inverse</button>
+            <button type="submit" class="bg-yellow-600 hover:bg-yellow-500 shadow-xl px-5 py-2 rounded text-white">Success</button>
+            <button type="submit" class="bg-green-600 hover:bg-green-500 shadow-xl px-5 py-2 rounded text-white">Danger</button>
+            <button type="submit" class="bg-green-900 hover:bg-green-800 shadow-xl px-5 py-2 rounded text-white">Warning</button>
+            <button type="submit" class="bg-teal-600 hover:bg-teal-500 shadow-xl px-5 py-2 rounded text-white">Warning</button>
+            <button type="submit" class="bg-blue-600 hover:bg-blue-500 shadow-xl px-5 py-2 rounded text-white">Warning</button>
+            <button type="submit" class="bg-indigo-600 hover:bg-indigo-500 shadow-xl px-5 py-2 rounded text-white">Warning</button>
+            <button type="submit" class="bg-purple-600 hover:bg-purple-500 shadow-xl px-5 py-2 rounded text-white">Warning</button>
+            <button type="submit" class="bg-pink-600 hover:bg-pink-500 shadow-xl px-5 py-2 rounded text-white">Warning</button>
         </div>
 	</div>
 
 	<main class="p-4">
        
         <div class="mb-5">
-            <button class="bg-blue-500 hover:bg-blue-400 text-white font-semibold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">3D Button</button>
+            <button class="bg-blue-500 hover:bg-blue-400 text-white font-semibold py-2 px-5 border-b-4 border-blue-700 hover:border-blue-500 rounded">3D Button</button>
         </div>
         <div class="mb-5">
             <div class="inline-flex">
