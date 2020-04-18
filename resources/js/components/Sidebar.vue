@@ -95,9 +95,9 @@
 
                             <svg class="w-4 h-4" v-else aria-hidden="true" data-prefix="fas" data-icon="angle-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" ><path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"/></svg>
                         </div>
-                        <ul class="list-reset w-full block ml-2" >
+                        <ul class="list-reset w-full block" >
                             <li class="my-2 md:my-0" v-for="j in i.child" v-if="i.child && i.collapsed"> 
-                                <router-link :to="j.link" class="py-2 pl-1 text-gray-600 no-underline hover:text-green-200 flex items-center">
+                                <router-link :to="j.link" class="pl-3 py-2 text-gray-600 no-underline hover:text-green-200 flex items-center">
                                     <span class="w-full inline-block pb-1 md:pb-0 text-sm pl-2 hidden sm:hidden md:block lg:block xl:block pl-10">{{ j.name }}</span>
                                 </router-link>
                             </li>
@@ -160,22 +160,6 @@
                         {
                             name:"Buttons",
                             link:'/uielements/buttons',
-                            icon:'<svg aria-hidden="true" data-prefix="fas" data-icon="laptop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="w-4 h-4 fill-current"><path fill="currentColor" d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg>',
-                            collapsed:false,
-                            child:[
-                                {
-                                    name:"Buttons",
-                                    link:'/uielements/buttons',
-                                },
-                                {
-                                    name:"Buttons",
-                                    link:'/uielements/buttons',
-                                },
-                                {
-                                    name:"Buttons",
-                                    link:'/uielements/buttons',
-                                },
-                            ],
                         },
                         {
                             name:"Test",
