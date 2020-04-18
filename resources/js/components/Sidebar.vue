@@ -162,8 +162,8 @@
                             link:'/uielements/buttons',
                         },
                         {
-                            name:"Test",
-                            link:'/asas/werewr'
+                            name:"Progress",
+                            link:'/uielements/progress'
                         },
                         {
                             name:"Test",

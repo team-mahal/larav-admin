@@ -16,9 +16,12 @@ export default [
 			{ path: 'charts', name: 'components.charts', component: page('components/charts.vue') },
 		]
 	}, 
-	{ path: '/uielements', name: 'uielements', component: page('uielements/buttons.vue'),
+	{ path: '/uielements',
+		component: page('uielements/index.vue'),
 		children: [
-			{ path: 'buttons', name: 'uielements.buttons', component: page('uielements/buttons.vue') },
+			{ path: '', redirect: { name: 'uielements.buttons' } },
+			{ path: '/uielements/buttons', name: 'uielements.buttons', component: page('uielements/buttons.vue') },
+			{ path: 'progress', name: 'uielements.progress', component: page('uielements/progress.vue') },
 		]
 	},  
 	{ path: '/settings',
