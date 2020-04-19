@@ -20,8 +20,9 @@ export default [
 		component: page('uielements/index.vue'),
 		children: [
 			{ path: '', redirect: { name: 'uielements.buttons' } },
-			{ path: '/uielements/buttons', name: 'uielements.buttons', component: page('uielements/buttons.vue') },
+			{ path: 'buttons', name: 'uielements.buttons', component: page('uielements/buttons.vue') },
 			{ path: 'progress', name: 'uielements.progress', component: page('uielements/progress.vue') },
+			{ path: 'accordions', name: 'uielements.accordions', component: page('uielements/accordions.vue') },
 		]
 	},  
 	{ path: '/settings',

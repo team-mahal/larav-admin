@@ -134,8 +134,8 @@
                             link:'/components/charts',
                         },  
                         {
-                            name:"Test",
-                            link:'/asas/werewr'
+                            name:"Accordions",
+                            link:'/components/accordions'
                         },
                         {
                             name:"Test",
@@ -166,8 +166,8 @@
                             link:'/uielements/progress'
                         },
                         {
-                            name:"Test",
-                            link:'/asas/dfsdfs'
+                            name:"Accordions",
+                            link:'/uielements/accordions'
                         },
                         {
                             name:"Test",
