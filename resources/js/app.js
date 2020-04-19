@@ -9,6 +9,7 @@ import vuescroll from 'vuescroll';
 import Multiselect from 'vue-multiselect'
 import Avatar from 'vue-avatar'
 import VueEditableElement from 'vue-editable-element'
+Vue.use(VueEditableElement)
 // register globally
 Vue.component('multiselect', Multiselect)
 Vue.component('Avatar', Avatar)
@@ -20,7 +21,6 @@ Vue.use(vuescroll, {
   	},
   	name: 'vuescroll' // customize component name, default -> vueScroll
 });
-Vue.use(VueEditableElement)
 // Import component
 import 'vue-loading-overlay/dist/vue-loading.css';
 
