@@ -170,6 +170,10 @@
                             link:'/uielements/accordions'
                         },
                         {
+                            name:"Notifications",
+                            link:'/uielements/notifications'
+                        },
+                        {
                             name:"Test",
                             link:'/asas/sdfsf'
                         },

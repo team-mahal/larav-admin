@@ -23,6 +23,7 @@ export default [
 			{ path: 'buttons', name: 'uielements.buttons', component: page('uielements/buttons.vue') },
 			{ path: 'progress', name: 'uielements.progress', component: page('uielements/progress.vue') },
 			{ path: 'accordions', name: 'uielements.accordions', component: page('uielements/accordions.vue') },
+			{ path: 'notifications', name: 'uielements.notifications', component: page('uielements/notifications.vue') },
 		]
 	},  
 	{ path: '/settings',
