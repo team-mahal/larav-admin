@@ -24,6 +24,7 @@ export default [
 			{ path: 'progress', name: 'uielements.progress', component: page('uielements/progress.vue') },
 			{ path: 'accordions', name: 'uielements.accordions', component: page('uielements/accordions.vue') },
 			{ path: 'notifications', name: 'uielements.notifications', component: page('uielements/notifications.vue') },
+			{ path: 'avatar', name: 'uielements.avatar', component: page('uielements/avatar.vue') },
 		]
 	},  
 	{ path: '/settings',

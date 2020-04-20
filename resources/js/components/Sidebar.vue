@@ -174,8 +174,8 @@
                             link:'/uielements/notifications'
                         },
                         {
-                            name:"Test",
-                            link:'/asas/sdfsf'
+                            name:"Avatar",
+                            link:'/uielements/avatar'
                         },
                         {
                             name:"Test",
