@@ -10,6 +10,9 @@ import Multiselect from 'vue-multiselect'
 import Avatar from 'vue-avatar'
 import VueEditableElement from 'vue-editable-element'
 Vue.use(VueEditableElement)
+import Accordion from 'vuejs-accordion'
+Vue.use(Accordion)
+
 // register globally
 Vue.component('multiselect', Multiselect)
 Vue.component('Avatar', Avatar)
