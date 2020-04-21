@@ -18,7 +18,7 @@
             <!-- / Search-->
             <!--Menu-->
             <div class="flex relative inline-block pr-6">
-
+                <LocaleDropdown/>
                 <div class="relative text-sm">
                     <div class="flex">
                     	<template v-if="token"> 
