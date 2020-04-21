@@ -7,10 +7,8 @@
 						<!-- Email -->
 						<div>
 							<label class="block text-green-500 text-sm font-bold mb-2 text-left" for="username">{{ $t('email') }}</label>
-							<div class="col-md-7">
-								<input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="block w-full bg-gray-200 focus:outline-none focus:bg-white focus:shadow-md rounded-full pl-12 pr-4 py-3" type="email" name="email">
-								<has-error :form="form" field="email" class="mt-2 text-red-600 text-left font-semibold" />
-							</div>
+							<input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="block w-full bg-gray-200 focus:outline-none focus:bg-white focus:shadow-md rounded-full pl-12 pr-4 py-3" type="email" name="email">
+							<has-error :form="form" field="email" class="mt-2 text-red-600 text-left font-semibold" />
 						</div>
 
 						<!-- Password -->
