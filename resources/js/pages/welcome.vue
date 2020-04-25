@@ -141,7 +141,7 @@
 			    <h3 class="text-md font-bold">Total Business Earning</h3>
 			</div>
 			<div class="bg-white shadow" style="height: 25rem;">
-				<MonthlyIncome/>
+				
 			</div>
 		</div>
 	</div>
@@ -150,10 +150,8 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import MonthlyIncome from './../components/chartjs/MonthlyIncome.vue'
 export default {
 	layout: 'basic',
-	components: { MonthlyIncome },
 
 	metaInfo () {
 		return { title: this.$t('home') }

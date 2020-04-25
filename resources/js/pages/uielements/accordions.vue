@@ -110,8 +110,9 @@
 	    }
 	}
 </script>
+
 <style>
-    .content {
+.content {
     transition: all 150ms ease;
 }
 .not-expanded .content {
